@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Dario Auta</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            color: #333;
+            background-image: url('auta.gif');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .top-link {
+            text-align: center;
+            padding: 10px 0;
+            background-color: rgba(51, 51, 51, 0.8);
+        }
+        
+        .top-link a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .top-link a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #2161b0;
+        }
+
+        /* Stylizacja formularza */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        /* Stylizacja przycisku */
+        button {
+            display: block;
+            width: 50%;
+            margin: 0 auto;
+            background-color: #2161b0;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #1a4e8d;
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-link">
+    <a href="index.html">Strona główna</a>
+</div>
+
+<div class="container">
+    <h1>Kontakt</h1>
+
+    <p>Masz pytania? Chętnie pomożemy! Skontaktuj się z nami, korzystając z poniższego formularza lub bezpośrednio:</p>
+
+    <h2>Dane kontaktowe</h2>
+    <p><strong>Telefon:</strong> 691 457 070</p>
+    <p><strong>E-mail:</strong> kontakt@darioauta.pl</p>
+    <p><strong>Adres:</strong> <a href="https://maps.google.com/?cid=12628594609795150032&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank">Dario Auta, Węglew-Kolonia 80A</a></p>
+
+    <h2>Napisz do nas</h2>
+    <form action="#" method="post">
+        <div class="form-group">
+            <label for="name">Imię i nazwisko</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Adres e-mail</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Wiadomość</label>
+            <textarea id="message" name="message" rows="3" required></textarea>
+        </div>
+
+        <button type="submit">Wyślij wiadomość</button>
+    </form>
+</div>
+
+</body>
+</html>

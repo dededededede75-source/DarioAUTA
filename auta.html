@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasze Auta - Dario Auta</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            color: #333;
+            background-image: url('auta.gif');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .top-link {
+            text-align: center;
+            padding: 10px 0;
+            background-color: rgba(51, 51, 51, 0.9);
+        }
+        
+        .top-link a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .top-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* Nowy kontener na całą zawartość strony */
+        .content-container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h1 {
+            color: #2161b0;
+            margin-top: 0;
+        }
+
+        /* Stylizacja ruchomego paska */
+        .carousel-container {
+            overflow: hidden;
+            white-space: nowrap;
+            padding: 20px 0;
+            cursor: pointer; /* Zmienia kursor na wskaźnik, by pokazać, że elementy są klikalne */
+        }
+
+        .carousel-container a {
+            display: inline-block; /* Upewnia się, że linki są blokami, które mogą mieć rozmiar */
+            margin: 0 10px;
+            border-radius: 8px;
+            overflow: hidden; /* Ukrywa to, co wystaje poza ramkę zdjęcia */
+        }
+
+        .carousel-container img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            display: block; /* Upewnia się, że obrazek wypełnia link */
+        }
+
+        /* Stylizacja ramki z linkiem */
+        .link-ramka {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+            border: 2px solid #2161b0;
+            border-radius: 12px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .link-ramka a {
+            color: #2161b0;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        
+        .link-ramka a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-link">
+    <a href="index.html">Strona główna</a>
+</div>
+
+<div class="content-container">
+    <h1>Nasze Samochody</h1>
+    
+    <div class="carousel-container">
+        <a href="https://darioauta.otomoto.pl/inventory" target="_blank">
+            <img src="sam 1.webp" alt="Samochód 1">
+        </a>
+        <a href="https://darioauta.otomoto.pl/inventory" target="_blank">
+            <img src="sam 2.webp" alt="Samochód 2">
+        </a>
+        <a href="https://darioauta.otomoto.pl/inventory" target="_blank">
+            <img src="sam 3.webp" alt="Samochód 3">
+        </a>
+        <a href="https://darioauta.otomoto.pl/inventory" target="_blank">
+            <img src="sam 4.webp" alt="Samochód 4">
+        </a>
+        <a href="https://darioauta.otomoto.pl/inventory" target="_blank">
+            <img src="sam 5.webp" alt="Samochód 5">
+        </a>
+        
+        <a href="https://darioauta.otomoto.pl/inventory" target="_blank">
+            <img src="sam 1.webp" alt="Samochód 1">
+        </a>
+        <a href="https://darioauta.otomoto.pl/inventory" target="_blank">
+            <img src="sam 2.webp" alt="Samochód 2">
+        </a>
+        <a href="https://darioauta.otomoto.pl/inventory" target="_blank">
+            <img src="sam 3.webp" alt="Samochód 3">
+        </a>
+        <a href="https://darioauta.otomoto.pl/inventory" target="_blank">
+            <img src="sam 4.webp" alt="Samochód 4">
+        </a>
+        <a href="https://darioauta.otomoto.pl/inventory" target="_blank">
+            <img src="sam 5.webp" alt="Samochód 5">
+        </a>
+    </div>
+
+    <div class="link-ramka">
+        <p>
+            <a href="https://darioauta.otomoto.pl/inventory" target="_blank">Zobacz pełną ofertę aut</a>
+        </p>
+    </div>
+</div>
+
+<script>
+    const carousel = document.querySelector('.carousel-container');
+    const numImages = 5; 
+    
+    let scrollPosition = 0;
+    const scrollStep = 1; 
+    const intervalTime = 20;
+
+    setInterval(() => {
+        scrollPosition += scrollStep;
+        carousel.scrollLeft = scrollPosition;
+
+        // Reset do początku, aby karuzela była ciągła
+        // Szerokość obrazka (300px) + marginesy (2x10px) = 320px
+        if (scrollPosition >= (numImages * 320)) { 
+            scrollPosition = 0;
+        }
+    }, intervalTime);
+</script>
+
+</body>
+</html>
